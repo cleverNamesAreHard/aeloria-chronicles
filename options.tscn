@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl2swtt3cp2n4"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_ynp7q"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_ynp7q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = " 	← 	"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

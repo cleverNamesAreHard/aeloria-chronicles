@@ -1,0 +1,11 @@
+{
+    "Mawgate": {
+        "description": "A heavily fortified city standing as the last bastion between Aeloria and the Maw, a gateway to abyssal realms. Mawgate is home to hardened warriors, scholars studying the dark rifts, and traders dealing in rare abyssal artifacts. Its towering walls and elite garrisons make it a stronghold of order, but also a place of constant tension.\n\n+5% Physical Defense, +3% Magic Resistance, +2% Stamina Recovery Speed."
+    },
+    "Shadehaven": {
+        "description": "A shadowy, intrigue-filled city nestled deep within the Verdant Reach, where rogues, spies, and assassins hone their craft. Shadehaven is a haven for mercenaries and outlaws, with underground guilds that control trade and influence within Aeloria. Despite its reputation, the city thrives on commerce and secrecy, making it a place of both opportunity and danger.\n\n+5% Critical Chance, +3% Dodge Chance, +2% Attack Speed."
+    },
+    "Brighthearth": {
+        "description": "A city of scholars, artisans, and divine followers, Brighthearth is known for its towering cathedrals and sprawling academies. Home to the most revered healers and magical researchers, it is a beacon of knowledge and faith. Its proximity to ancient ruins makes it a hub for adventurers seeking hidden knowledge and lost relics.\n\n+5% Healing Effectiveness, +3% Magic Damage, +2% Mana Regeneration."
+    }
+}

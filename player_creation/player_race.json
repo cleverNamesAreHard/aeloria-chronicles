@@ -1,0 +1,20 @@
+{
+    "Human": {
+        "description": "Versatile and adaptable, with no inherent weaknesses.\n\n+5% EXP Gain, +2% to All Stats."
+    },
+    "Elf": {
+        "description": "Graceful and attuned to nature and magic.\n\n+5% Magic Damage, +3% Dodge Chance."
+    },
+    "Dwarf": {
+        "description": "Hardy and skilled with craftsmanship and melee combat.\n\n+5% Physical Defense, +3% HP Regen."
+    },
+    "Orc": {
+        "description": "Fierce warriors with immense strength.\n\n+5% Melee Damage, +3% Attack Speed."
+    },
+    "Tiefling": {
+        "description": "Cunning and infused with abyssal energy.\n\n+5% Dark Magic Power, +3% Lifesteal."
+    },
+    "Draconian": {
+        "description": "Descendants of ancient dragons, resilient and powerful.\n\n+5% Elemental Resistance, +3% Critical Damage."
+    }
+}

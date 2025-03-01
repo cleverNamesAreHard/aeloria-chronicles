@@ -1,0 +1,29 @@
+{
+    "Barbarian": {
+        "description": "A fearless warrior fueled by rage, capable of unleashing devastating melee attacks while shrugging off damage.\n\n+10% Physical Damage, +5% Max HP, -5% Magic Resistance"
+    },
+    "Bard": {
+        "description": "A charismatic performer who empowers allies with magical music, buffs, and debuffs while being highly adaptable in combat.\n\n+10% Buff Duration, +5% Critical Chance, -5% Physical Defense"
+    },
+    "Cleric": {
+        "description": "A divine caster who heals, protects, and smites enemies with holy magic, making them an essential support in any team.\n\n+10% Healing Effectiveness, +5% Magic Resistance, -5% Attack Speed"
+    },
+    "Druid": {
+        "description": "A guardian of nature, wielding elemental magic and the ability to shapeshift into powerful animal forms.\n\n+10% Nature Magic Power, +5% HP Regen, -5% Stamina Recovery Speed"
+    },
+    "Monk": {
+        "description": "A disciplined martial artist who relies on speed, agility, and precise strikes to defeat enemies without the need for heavy armor.\n\n+10% Dodge Chance, +5% Unarmed Damage, -5% Physical Defense"
+    },
+    "Mage": {
+        "description": "A master of the arcane, capable of unleashing powerful elemental spells but physically fragile.\n\n+10% Magic Damage, +5% Mana Regeneration, -5% Physical Defense"
+    },
+    "Ranger": {
+        "description": "A skilled hunter and marksman who excels at long-range combat, using bows, traps, and animal companions.\n\n+10% Ranged Damage, +5% Movement Speed, -5% Melee Defense"
+    },
+    "Rogue": {
+        "description": "A cunning and stealthy fighter who relies on speed, critical strikes, and deception to eliminate enemies before they can react.\n\n+10% Critical Damage, +5% Attack Speed, -5% Max HP"
+    },
+    "Warrior": {
+        "description": "A heavily-armored combatant who specializes in melee combat, able to withstand significant damage and control the battlefield.\n\n+10% Physical Defense, +5% Stamina Recovery Speed, -5% Magic Resistance"
+    }
+}

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1sl0caj26i44"]
+
+[ext_resource type="Script" path="res://game_home.gd" id="1_7qcpe"]
+[ext_resource type="Texture2D" uid="uid://baqe3fwlfmwl8" path="res://assets/img/eldoria_background.jpg" id="1_i4jp3"]
+[ext_resource type="Theme" uid="uid://ch4tg36s8xwpd" path="res://themes/button_text.tres" id="3_kat2d"]
+[ext_resource type="FontFile" uid="uid://cxu340id4pcji" path="res://assets/font/ubuntu/ubuntu-font-family-0.80/UbuntuMono-R.ttf" id="3_qxdf7"]
+
+[node name="Game_Home" type="Node2D"]
+script = ExtResource("1_7qcpe")
+
+[node name="MarginContainer_background" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer_background"]
+layout_mode = 2
+
+[node name="eldoria_background" type="TextureRect" parent="MarginContainer_background/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_i4jp3")
+
+[node name="Story" type="Button" parent="."]
+offset_left = 796.0
+offset_top = 1870.0
+offset_right = 890.0
+offset_bottom = 1907.0
+scale = Vector2(8, 8)
+theme = ExtResource("3_kat2d")
+theme_override_fonts/font = ExtResource("3_qxdf7")
+theme_override_font_sizes/font_size = 26
+text = "Story"
+
+[node name="Palace" type="Button" parent="."]
+offset_left = 2006.0
+offset_top = 978.0
+offset_right = 2108.0
+offset_bottom = 1013.0
+scale = Vector2(8, 8)
+theme = ExtResource("3_kat2d")
+theme_override_fonts/font = ExtResource("3_qxdf7")
+theme_override_font_sizes/font_size = 26
+text = "Palace"
+
+[connection signal="pressed" from="Story" to="." method="_on_story_pressed"]
+[connection signal="pressed" from="Palace" to="." method="_on_palace_pressed"]

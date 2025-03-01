@@ -1,0 +1,158 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6k8bh8ksxcx3"]
+
+[ext_resource type="Script" path="res://player_create.gd" id="1_vrgn1"]
+[ext_resource type="Theme" uid="uid://ch4tg36s8xwpd" path="res://themes/button_text.tres" id="1_wn70v"]
+[ext_resource type="Texture2D" uid="uid://c4rf164etpgbx" path="res://assets/img/papyrus-bg.png" id="2_1s3jp"]
+
+[node name="Player Create" type="Node2D"]
+script = ExtResource("1_vrgn1")
+
+[node name="Background_TextureRect" type="TextureRect" parent="."]
+offset_left = -14.0
+offset_top = -27.0
+offset_right = 1192.0
+offset_bottom = 663.0
+texture = ExtResource("2_1s3jp")
+expand_mode = 1
+
+[node name="Content_PanelContainer" type="PanelContainer" parent="."]
+visible = false
+offset_left = 540.0
+offset_top = 94.0
+offset_right = 1052.0
+offset_bottom = 524.0
+
+[node name="Background_ColorRect" type="ColorRect" parent="Content_PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.227451, 0.227451, 0.227451, 0.239216)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content_PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Content_Title_Label" type="Label" parent="Content_PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Content_Text_Label" type="Label" parent="Content_PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_wn70v")
+autowrap_mode = 2
+
+[node name="Launch_PanelContainer" type="PanelContainer" parent="."]
+visible = false
+offset_left = 525.0
+offset_top = 95.0
+offset_right = 1037.0
+offset_bottom = 525.0
+scale = Vector2(0.653302, 0.711219)
+
+[node name="Background_ColorRect" type="ColorRect" parent="Launch_PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.227451, 0.227451, 0.227451, 0.643137)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Launch_PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Launch_Label" type="Label" parent="Launch_PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_wn70v")
+autowrap_mode = 2
+
+[node name="LaunchButton" type="Button" parent="Launch_PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+text = "Launch"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 118.0
+offset_top = 68.0
+offset_right = 509.0
+offset_bottom = 563.0
+
+[node name="Character_Options_VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_group_ = true
+
+[node name="Race_Label" type="Label" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.0980392, 0.0980392, 1)
+text = "Starting Race"
+
+[node name="Race_OptionButton" type="OptionButton" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Class_Label" type="Label" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.0980392, 0.0980392, 1)
+text = "Starting Class"
+
+[node name="Class_OptionButton" type="OptionButton" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Area_Label" type="Label" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.0980392, 0.0980392, 1)
+text = "Starting City"
+
+[node name="Area_OptionButton" type="OptionButton" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Faction_Label" type="Label" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.0980392, 0.0980392, 1)
+text = "Starting Faction"
+
+[node name="Faction_OptionButton" type="OptionButton" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Background_Label" type="Label" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.360784, 0.0980392, 0.0980392, 1)
+text = "Starting Background"
+
+[node name="Background_OptionButton" type="OptionButton" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+
+[node name="Name_TextEdit" type="TextEdit" parent="ScrollContainer/Character_Options_VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_wn70v")
+placeholder_text = "Enter your player name!"
+
+[node name="CreateCharacter_Button" type="Button" parent="ScrollContainer/Character_Options_VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_wn70v")
+text = "Create Character"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="ScrollContainer/Character_Options_VBoxContainer"]
+
+[connection signal="ready" from="Content_PanelContainer" to="." method="_on_content_panel_container_ready"]
+[connection signal="ready" from="Launch_PanelContainer" to="." method="_on_content_panel_container_ready"]
+[connection signal="pressed" from="Launch_PanelContainer/VBoxContainer/LaunchButton" to="." method="_on_launch_button_pressed"]
+[connection signal="ready" from="ScrollContainer" to="." method="_on_scroll_container_ready"]
+[connection signal="item_selected" from="ScrollContainer/Character_Options_VBoxContainer/Race_OptionButton" to="." method="_on_starting_race_option_button_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/Character_Options_VBoxContainer/Class_OptionButton" to="." method="_on_starting_class_option_button_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/Character_Options_VBoxContainer/Area_OptionButton" to="." method="_on_starting_area_option_button_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/Character_Options_VBoxContainer/Faction_OptionButton" to="." method="_on_starting_faction_option_button_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/Character_Options_VBoxContainer/Background_OptionButton" to="." method="_on_starting_background_option_button_item_selected"]
+[connection signal="pressed" from="ScrollContainer/Character_Options_VBoxContainer/CreateCharacter_Button" to="." method="_on_create_character_button_pressed"]
+[connection signal="ready" from="ScrollContainer/Character_Options_VBoxContainer/CreateCharacter_Button" to="." method="_ready"]

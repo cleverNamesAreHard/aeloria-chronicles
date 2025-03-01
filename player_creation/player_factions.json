@@ -1,0 +1,14 @@
+{
+    "Ashen Veil": {
+        "description": "A secretive order favoring dark magic and deception. Operates from the shadows, using secrecy and cunning to achieve power.\n\n+5% Critical Chance"
+    },
+    "Eldoria": {
+        "description": "The ruling empire, focused on law and order. Known for its structured military and diplomatic dominance.\n\n+5% Defense in Faction Wars"
+    },
+    "Stormborn Legion": {
+        "description": "A nomadic warrior tribe, favoring strength and honor above all else. Masters of battlefield combat and personal duels.\n\n+5% Melee Damage"
+    },
+    "Verdant Pact": {
+        "description": "A druidic coalition protecting nature and balance. They are deeply attuned to the land and its creatures.\n\n+5% Healing Effectiveness"
+    }
+}

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ch4tg36s8xwpd"]
+
+[ext_resource type="FontFile" uid="uid://cxu340id4pcji" path="res://assets/font/ubuntu/ubuntu-font-family-0.80/UbuntuMono-R.ttf" id="1_l3fqu"]
+
+[resource]
+default_font = ExtResource("1_l3fqu")
+default_font_size = 26

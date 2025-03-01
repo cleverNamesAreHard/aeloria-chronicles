@@ -1,0 +1,15 @@
+{
+    "Mercenary": {
+        "description": "A hired blade with no loyalty but to coin. Skilled in all forms of combat and willing to take on the most dangerous jobs.\n\n+5% Attack Speed, Discounts on Weapon Upgrades."
+    },
+    "Noble": {
+        "description": "Born into wealth and power, accustomed to diplomacy and political maneuvering. Known for their silver tongues and deep pockets.\n\n+5% Gold Earned, Unique Political Quests."
+    },
+    "Outlaw": {
+        "description": "A rogue from the shadows, skilled in deception and subterfuge. Used to operating outside the law.\n\n+5% Critical Chance, Easier Access to Black Markets."
+    },
+    "Scholar": {
+        "name": "Scholar",
+        "description": "A learned individual, devoted to knowledge and magic. Often found in libraries or studying the arcane arts.\n\n+5% Magic Damage, Access to Hidden Lore."
+    }
+}
