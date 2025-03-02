@@ -7,18 +7,17 @@ func get_text_file_content(filePath):
 	var content = file.get_as_text()
 	return content
 
-func get_player_config():
-	var player_config = get_text_file_content("res://game_config.json")
+func get_next_scene():
+	var player_config = get_text_file_content("res://player/player_config.json")
 	var json_as_dict = JSON.parse_string(player_config)
-	return json_as_dict
+	if json_as_dict["player_id"]:
+		var next_scene = "res://" + json_as_dict["current_scene"]
+		get_tree().change_scene_to_file(next_scene)
+	else:
+		get_tree().change_scene_to_file("res://player_create.tscn")
 
 func _on_play_pressed():
-	var player_config = get_player_config()
-	if player_config["main_menu"]["new_player"] == true:
-		print("Going to player create screen")
-		get_tree().change_scene_to_file("res://player_create.tscn")
-	else:
-		get_tree().change_scene_to_file("res://game_home.tscn")
+		get_next_scene()
 
 func _on_options_pressed():
 	get_tree().change_scene_to_file("res://options.tscn")
