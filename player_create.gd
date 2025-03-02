@@ -3,11 +3,10 @@ extends Node2D
 
 # Content Panel nodes
 @onready var content_panel: PanelContainer = $Content_PanelContainer
-@onready var content_title_lable: Label = $Content_PanelContainer/VBoxContainer/Content_Title_Label
-@onready var content_text_lable: Label = $Content_PanelContainer/VBoxContainer/Content_Text_Label
+@onready var content_title_label: Label = $Content_PanelContainer/VBoxContainer/Content_Title_Label
+@onready var content_text_label: Label = $Content_PanelContainer/VBoxContainer/Content_Text_Label
 
 # Option Buttons
-# See also validate_option_buttons() and populate_option_buttons()
 @onready var class_option: OptionButton = $ScrollContainer/Character_Options_VBoxContainer/Class_OptionButton
 @onready var area_option: OptionButton = $ScrollContainer/Character_Options_VBoxContainer/Area_OptionButton
 @onready var background_option: OptionButton = $ScrollContainer/Character_Options_VBoxContainer/Background_OptionButton
@@ -56,15 +55,14 @@ func configure(config_type, selected_option):
 	launch_panel.hide()
 	if selected_option != "":
 		var config = get_config(config_type, selected_option)
-		content_title_lable.text = selected_option
-		content_text_lable.text = config["description"]
+		content_title_label.text = selected_option
+		content_text_label.text = config["description"]
 		content_panel.show()
 	else:
 		content_panel.hide()
 
 func populate_option_buttons():
 	# Don't forget to add them to the @onready section up top. They're needed in the item_selected functions
-	# See also validate_option_buttons()
 	var option_button_map = {
 		"classes": $ScrollContainer/Character_Options_VBoxContainer/Class_OptionButton,
 		"area": $ScrollContainer/Character_Options_VBoxContainer/Area_OptionButton,
@@ -128,19 +126,22 @@ func check_character_name_availability(character_name=""):
 	http_request.request(url)
 
 func validate_option_buttons():
-	# See also populate_option_buttons()
-	var required_options = {
-		"Class": class_option.text,
-		"Area": area_option.text,
-		"Race": race_option.text,
-		"Faction": faction_option.text,
-		"Background": background_option.text
-	}
-	
-	for key in required_options:
-		if required_options[key] == "":
-			print("❌ %s not selected" % key)
-			return false
+	# TODO: "There's gotta be a better way." - Albert Einstein, 2028
+	if class_option.text == "":
+		print("❌ Class not selected")
+		return false
+	if area_option.text == "":
+		print("❌ Area not selected")
+		return false
+	if race_option.text == "":
+		print("❌ Race not selected")
+		return false
+	if faction_option.text == "":
+		print("❌ Faction not selected")
+		return false
+	if background_option.text == "":
+		print("❌ Background not selected")
+		return false
 	return true
 
 func parse_check_name_available(response_code, json):
