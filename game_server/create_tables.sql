@@ -14,5 +14,7 @@ INSERT INTO Player (name, character_class, race, faction, background, starting_a
 VALUES ('Sarumae', 'Warrior', 'Human', 'Kingdom of Eldoria', 'Noble', 'Brighthearth');
 
 
+delete from Player where name != 'Sarumae';
+
 
 select * from Player;
