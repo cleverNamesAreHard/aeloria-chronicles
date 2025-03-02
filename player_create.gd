@@ -126,22 +126,19 @@ func check_character_name_availability(character_name=""):
 	http_request.request(url)
 
 func validate_option_buttons():
-	# TODO: "There's gotta be a better way." - Albert Einstein, 2028
-	if class_option.text == "":
-		print("❌ Class not selected")
-		return false
-	if area_option.text == "":
-		print("❌ Area not selected")
-		return false
-	if race_option.text == "":
-		print("❌ Race not selected")
-		return false
-	if faction_option.text == "":
-		print("❌ Faction not selected")
-		return false
-	if background_option.text == "":
-		print("❌ Background not selected")
-		return false
+	# See also populate_option_buttons()
+	var required_options = {
+		"Class": class_option.text,
+		"Area": area_option.text,
+		"Race": race_option.text,
+		"Faction": faction_option.text,
+		"Background": background_option.text
+	}
+
+	for key in required_options:
+		if required_options[key] == "":
+			print("❌ %s not selected" % key)
+			return false
 	return true
 
 func parse_check_name_available(response_code, json):
