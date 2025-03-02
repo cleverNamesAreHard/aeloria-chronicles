@@ -206,6 +206,7 @@ func store_character_id():
 	var player_config_file = "res://player/player_config.json"
 	var config_as_json = JSON.parse_string(get_text_file_content(player_config_file))
 	config_as_json["player_id"] = character_id
+	config_as_json["current_scene"] = "story_scenes/story_intro.tscn"
 	set_text_file_content(player_config_file, JSON.stringify(config_as_json))
 
 func _on_launch_button_pressed():
