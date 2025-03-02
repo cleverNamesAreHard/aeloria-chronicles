@@ -49,57 +49,6 @@ def check_name_avail():
     else:
         return jsonify({"available": True, "message": "Name is available."}), 200
 
-from flask import Flask, jsonify, request
-from flask_sqlalchemy import SQLAlchemy
-import os
-import sys
-
-
-app = Flask(__name__)
-
-# Database setup (SQLite as a file-based DB)
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASE_DIR, "game_server.db")
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_PATH}"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-db = SQLAlchemy(app)
-
-class Player(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False, unique=True)
-    character_class = db.Column(db.String(50), nullable=False)
-    race = db.Column(db.String(50), nullable=False)
-    faction = db.Column(db.String(50), nullable=False)
-    background = db.Column(db.String(50), nullable=False)
-    starting_area = db.Column(db.String(50), nullable=False)
-
-    def __init__(self, name, character_class, race, faction, background, starting_area):
-        self.name = name
-        self.character_class = character_class
-        self.race = race
-        self.faction = faction
-        self.background = background
-        self.starting_area = starting_area
-
-@app.route("/")
-def home():
-    return jsonify({"message": "Game API is running!"})
-
-@app.route("/check_name_avail", methods=["GET"])
-def check_name_avail():
-    """Check if a player name is available."""
-    name = request.args.get("name", "").strip()  # Ensures name is not None and removes extra spaces
-    if not name:
-        return jsonify({"error": "No name provided."}), 400
-
-    # Query the database to check if the name exists
-    player = Player.query.filter_by(name=name).first()
-    if player:
-        return jsonify({"available": False, "message": "Name is taken."}), 200
-    else:
-        return jsonify({"available": True, "message": "Name is available."}), 200
-
 @app.route("/create_character", methods=["POST"])
 def create_character():
     """Handles character creation from client POST request."""
