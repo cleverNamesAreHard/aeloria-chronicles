@@ -179,3 +179,5 @@ assets/
 .pypirc
 
 *.tmp
+
+*.db
