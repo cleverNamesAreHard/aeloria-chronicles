@@ -5,7 +5,7 @@
 
 Feel free to post a discussion thread if you're interested in participating
 
-## **📜 About the Game**  
+## **About the Game**  
 *Aeloria Chronicles: Rift War* is a **fantasy RPG** blending **PvE, PvP, and faction-based wars**. Players embark on an **epic journey**, selecting their **race, faction, and background**, battling in dungeons, and competing in large-scale faction wars.
 
 - **Tactical ATB Combat** – Engage in strategic **Active Time Battles** with cooldown-based abilities.
